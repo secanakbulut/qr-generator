@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>qr generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>qr generator</h1>
+  <p class="hint">type text or a url, get a qr code.</p>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-tab="text">text</button>
+    <button class="tab" data-tab="url">url</button>
+  </div>
+
+  <section class="panel active" data-panel="text">
+    <label>text
+      <textarea id="text-input" rows="4" placeholder="anything you want to encode"></textarea>
+    </label>
+  </section>
+
+  <section class="panel" data-panel="url">
+    <label>url
+      <input type="url" id="url-input" placeholder="https://example.com">
+    </label>
+  </section>
+
+  <div class="output">
+    <canvas id="qr"></canvas>
+    <p id="status" class="status">type something to generate a code</p>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
