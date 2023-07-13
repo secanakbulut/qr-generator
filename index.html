@@ -9,11 +9,13 @@
 <body>
 <main>
   <h1>qr generator</h1>
-  <p class="hint">type text or a url, get a qr code.</p>
+  <p class="hint">text, url, wifi, vcard. renders as you type.</p>
 
   <div class="tabs" role="tablist">
     <button class="tab active" data-tab="text">text</button>
     <button class="tab" data-tab="url">url</button>
+    <button class="tab" data-tab="wifi">wifi</button>
+    <button class="tab" data-tab="vcard">vcard</button>
   </div>
 
   <section class="panel active" data-panel="text">
@@ -25,6 +27,34 @@
   <section class="panel" data-panel="url">
     <label>url
       <input type="url" id="url-input" placeholder="https://example.com">
+    </label>
+  </section>
+
+  <section class="panel" data-panel="wifi">
+    <label>ssid
+      <input type="text" id="wifi-ssid" placeholder="network name">
+    </label>
+    <label>password
+      <input type="text" id="wifi-pass" placeholder="leave blank for open network">
+    </label>
+    <label>encryption
+      <select id="wifi-enc">
+        <option value="WPA">WPA / WPA2</option>
+        <option value="WEP">WEP</option>
+        <option value="nopass">none (open)</option>
+      </select>
+    </label>
+  </section>
+
+  <section class="panel" data-panel="vcard">
+    <label>full name
+      <input type="text" id="vc-name" placeholder="jane doe">
+    </label>
+    <label>phone
+      <input type="tel" id="vc-phone" placeholder="+1 555 0100">
+    </label>
+    <label>email
+      <input type="email" id="vc-email" placeholder="jane@example.com">
     </label>
   </section>
 

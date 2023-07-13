@@ -67,7 +67,7 @@ label {
   margin-bottom: 0.85rem;
 }
 
-input, textarea {
+input, textarea, select {
   display: block;
   width: 100%;
   margin-top: 0.3rem;
@@ -81,7 +81,7 @@ input, textarea {
 
 textarea { resize: vertical; min-height: 80px; }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: #1c1c1c;
   background: #fff;
