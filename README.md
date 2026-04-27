@@ -1,5 +1,7 @@
 # qr-generator
 
+![](docs/screenshot.png)
+
 small browser tool for making qr codes. supports plain text, urls, wifi credentials, and vcard contacts. renders live to a canvas and lets you save the result as a png.
 
 i needed one for printing wifi cards for an airbnb and got tired of the ad-stuffed sites, so i wrote my own in an evening.
